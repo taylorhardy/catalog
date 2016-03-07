@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+<div class="col-lg-5 col-lg-offset-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">Add New Item</div>
+        <div class="panel-body">
+            <form action="#" method='POST'>
+
+                <p>Name:
+                    <input type='text' size='30' name='name'>
+
+                    Category:
+                    <select name="category">
+                        {% for category in categories %}
+                        <option>{{category.name}}</option>
+                        {% endfor %}
+                    </select></p>
+                <p>Description:</p>
+                <textarea name="description" cols="50" rows="6"></textarea>
+
+                <br/>
+                <br/>
+
+                <button class="btn btn-primary new" type='submit'>Create New Item</button>
+                <a class="btn btn-danger" href="{{url_for('showCatalog')}}">Cancel</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

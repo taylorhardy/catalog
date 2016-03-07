@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+<div class="col-lg-4 col-lg-offset-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">Edit Item</div>
+        <div class="panel-body">
+            <form method="POST">
+                <p>Name: <input type="text" name="name" placeholder="{{item.name}}">
+                    Category:
+                    <select name="category">
+                        {% for category in categories %}
+                        <option>{{category.name}}</option>
+                        {% endfor %}
+                    </select></p>
+                <p>Description:</p>
+                <textarea name="description" cols="50" rows="6"></textarea>
+                <p>
+                    <br/>
+                    <br/>
+                    {% if user %}
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                    {% endif %}
+                    <a href="{{url_for('showCatalog')}}">
+                        <a class="btn btn-warning" href="{{url_for('showCatalog')}}">Back</a>
+                    </a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</body>
+</html>

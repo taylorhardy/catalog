@@ -1,0 +1,6 @@
+body            { background-color: #333333}
+
+.categories     {  border-right: 1px solid grey;}
+.flash          { background: #cee5F5; }
+.error          { background: #f0d6d6; padding: 0.5em; }
+.new            { margin-right: 3px;}

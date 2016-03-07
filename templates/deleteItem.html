@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+<div class="col-lg-4 col-lg-offset-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">Delete Item</div>
+        <div class="panel-body">
+
+            <form action="#" method='POST'>
+                <p>Are you sure that you wish to delete {{item.name}}?</p>
+                <button class="btn btn-danger">Delete</button>
+                <a href="{{url_for('showCatalog')}}">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
